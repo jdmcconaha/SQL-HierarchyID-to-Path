@@ -2,14 +2,28 @@
 
 The GetItemPaths stored procedure returns the hierarchical paths of items in a specified table by traversing a hierarchyid column.
 
-|Id|Name|HierarchyID|
-|--|----|-----------|
-|1|	CEO	|/1/
-|2|	CFO	|/1/2/
-|3|	CTO	|/1/3/
-|4|	Manager|	/1/2/4/
-|5|	Developer|	/1/3/5/
-|6|	Designer|	/1/3/6/
+
+##Example
+A table with the following records:
+|Id|Name|HierarchyID
+|--|----|-----------
+|1|	CEO	| /1/
+|2|	CFO	| /1/2/
+|3|	CTO	| /1/3/
+|4|	Manager| /1/2/4/
+|5|	Developer| /1/3/5/
+|6|	Designer| /1/3/6/
+
+Will return:
+|Path
+|----
+|CEO
+|CEO/CFO
+|CEO/CFO/Manager
+|CEO/CTO
+|CEO/CTO/Developer
+|CEO/CTO/Designer
+
 
 ##Parameters
 @TableName: A string value that specifies the name of the table containing the items to retrieve.
