@@ -44,7 +44,7 @@ EXEC [dbo].[GetItemPaths]
 
 This will return a result set containing the hierarchical paths of each item in the Items table based on their location in the hierarchy.
 
-##Implementation Details
+## Implementation Details
 The stored procedure uses a common table expression (CTE) to recursively traverse the hierarchy tree and build the paths of each item.
 
 The initial query selects only the root level nodes by filtering on the GetLevel() method of the hierarchyid column.
