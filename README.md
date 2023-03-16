@@ -27,7 +27,9 @@ Will return:
 
 ## Parameters
 @TableName: A string value that specifies the name of the table containing the items to retrieve.
+
 @NameField (optional): A string value that specifies the name of the field in the table containing the item names. The default value is 'Name'.
+
 @HierarchyIDField (optional): A string value that specifies the name of the hierarchyid field in the table. The default value is 'HierarchyID'.
 
 ## Usage
