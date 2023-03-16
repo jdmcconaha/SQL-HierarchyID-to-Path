@@ -1,9 +1,9 @@
-#GetItemPaths Stored Procedure
+# GetItemPaths Stored Procedure
 
 The GetItemPaths stored procedure returns the hierarchical paths of items in a specified table by traversing a hierarchyid column.
 
 
-##Example
+## Example
 A table with the following records:
 |Id|Name|HierarchyID
 |--|----|-----------
@@ -25,12 +25,12 @@ Will return:
 |CEO/CTO/Designer
 
 
-##Parameters
+## Parameters
 @TableName: A string value that specifies the name of the table containing the items to retrieve.
 @NameField (optional): A string value that specifies the name of the field in the table containing the item names. The default value is 'Name'.
 @HierarchyIDField (optional): A string value that specifies the name of the hierarchyid field in the table. The default value is 'HierarchyID'.
 
-##Usage
+## Usage
 To use the stored procedure, specify the required parameters and execute it as follows:
 
 ```SQL
